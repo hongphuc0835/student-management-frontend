@@ -1,0 +1,179 @@
+/* Đặt lại các thiết lập mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+html {
+  background-image: url('../img/anh nen.jpg');
+  background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ mà không bị méo */
+  background-position: center; /* Canh giữa ảnh nền */
+  background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+  height: 100vh; /* Chiều cao bằng với chiều cao màn hình */
+  width: 100%;
+}
+
+
+
+/* Container chính */
+.container {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Container của bảng để cuộn khi có nhiều sinh viên */
+.table-container {
+  max-height: 400px; /* Thiết lập chiều cao tối đa cho bảng */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  margin-top: 20px;
+  border: 1px solid #ddd; /* Đường viền xung quanh bảng */
+  border-radius: 4px; /* Bo góc cho đường viền bảng */
+}
+
+.student-table thead tr {
+  position: sticky;
+  top: 0; /* Cố định hàng đầu tiên của tiêu đề */
+  background-color: #f8f8f8; /* Màu nền cho tiêu đề để nổi bật hơn */
+  z-index: 1; /* Đảm bảo tiêu đề luôn nằm trên các dòng khác */
+}
+
+/* Tiêu đề trang */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Phần tìm kiếm sinh viên */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #3b82f6;
+}
+
+.search-container button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #2563eb;
+}
+
+/* Form thêm và chỉnh sửa sinh viên */
+.add-student-form, .edit-student-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.add-student-form input,
+.edit-student-form input {
+  margin-right: 10px;
+  padding: 10px;
+  width: 20%;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.add-student-form input:focus,
+.edit-student-form input:focus {
+  border-color: #3b82f6;
+}
+
+.add-student-form button,
+.edit-student-form button {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-student-form button:hover,
+.edit-student-form button:hover {
+  background-color: #059669;
+}
+
+/* Bảng hiển thị danh sách sinh viên */
+.student-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  
+}
+
+.student-table th, .student-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.student-table th {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.student-table tr:hover {
+  background-color: #e2e8f0;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #fbbf24;
+}
+
+.btn-edit:hover {
+  background-color: #f59e0b;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  margin-left: 20px;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
